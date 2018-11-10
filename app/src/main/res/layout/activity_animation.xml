@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.animation.AnimationActivity">
+
+    <LinearLayout style="@style/ll_main">
+
+        <TextView
+            android:id="@+id/bt_head"
+            style="@style/btSty1"
+            android:text="头像水波纹" />
+
+        <TextView
+            android:id="@+id/tv_auto_text"
+            style="@style/btSty1"
+            android:text="自适应文字" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_main">
+
+        <TextView
+            android:id="@+id/tv_pmd"
+            style="@style/btSty1"
+            android:text="跑马灯" />
+
+        <TextView
+            android:id="@+id/tv_edit"
+            style="@style/btSty1"
+            android:text="高逼格输入框" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_main">
+
+        <TextView
+            android:id="@+id/tv_rain"
+            style="@style/btSty1"
+            android:text="下雨" />
+
+        <TextView
+            android:id="@+id/tv_snow"
+            style="@style/btSty1"
+            android:text="下雪" />
+
+    </LinearLayout>
+
+    <LinearLayout style="@style/ll_main">
+
+        <TextView
+            android:id="@+id/tv_share"
+            style="@style/btSty1"
+            android:text="分享按钮" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</layout>

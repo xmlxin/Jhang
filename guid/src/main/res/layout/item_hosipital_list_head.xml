@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+    
+    <TextView
+        android:id="@+id/tv_tjks"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/color_66"
+        android:text="推荐科室"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/color_green"
+        android:text="济南"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_position"
+        android:paddingLeft="@dimen/dp_15"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/dp_15"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    
+
+</RelativeLayout>

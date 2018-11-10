@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:text="选择科室查医院"
+    android:gravity="center_vertical"
+    android:textSize="@dimen/sp_13"
+    android:background="#f4f4f4"
+    android:paddingLeft="@dimen/dp_16"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"/>
+

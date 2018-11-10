@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimationMainActivity">
+
+
+    <ImageView
+        android:id="@+id/iv_body"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:transitionName="img"
+        android:background="@drawable/body_z"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+</LinearLayout>

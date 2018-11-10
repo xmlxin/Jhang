@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.RobotActivity">
+
+    <TextView
+        android:text="@string/hook_url"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:id="@+id/et_webhook_url"
+        android:hint="输入地址"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/et_send_content"
+        android:hint="输入自定义内容，以英文;号隔开"
+        android:paddingLeft="7dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_et_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/sp_16"
+        android:textColor="#4D4D4D"
+        android:minHeight="90dp"
+        android:maxHeight="140dp"
+        android:textColorHint="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:id="@+id/et_at"
+            android:hint="填写需要@的人手机号码(可不填写)"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bt_send"
+        android:layout_marginTop="40dp"
+        style="@style/btSty"
+        android:text="发送" />
+
+</LinearLayout>

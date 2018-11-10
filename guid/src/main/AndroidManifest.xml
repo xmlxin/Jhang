@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xiaoxin.guid">
+
+    <application>
+        <activity
+            android:name=".activity.GuidanceActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.DiseaseActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.FollowZzActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.ResultActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.HumanBodyActivity" />
+        <activity
+            android:name=".search.disease.SearchDiseaseActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".search.disease.DiseaseDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".search.disease.DiseaseInfoActivity" />
+        <activity
+            android:name=".search.hospital.KsSearchHospitalActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".search.drug.DrugListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".search.drug.DrugDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.TestActivity" />
+        <activity android:name=".activity.Test1Activity" />
+        <activity
+            android:name=".search.drug.SearchDrugActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".search.hospital.HostipitalListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".search.hospital.HospitalDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".search.truth.TruthActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#334060</color>
+    <color name="colorPrimaryDark">#334060</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="fab_background_color">#FF4081</color>
+    <color name="dialog_background_color">#fafafa</color>
+    <color name="dialog_background_scrim">#99323232</color>
+    <!--<color name="black2">##3F51B5</color>-->
+    <color name="black1">#496185</color>
+
+    <color name="line">#d0d0d0</color>
+    <color name="textColor">#2b2f33</color>
+    <color name="white11">#ffffff</color>
+
+</resources>

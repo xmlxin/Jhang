@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">guid</string>
+
+    <!-- man child -->
+    <string-array name="man">
+        <item>头部</item>
+        <item>眼部</item>
+        <item>耳部</item>
+        <item>鼻部</item>
+        <item>口部</item>
+        <item>面部</item>
+        <item>颈部</item>
+        <item>上肢</item>
+        <item>胸部</item>
+        <item>腹部</item>
+        <item>髋部</item>
+        <item>下肢</item>
+        <item>阴部</item>
+
+        <!--反面：头部，颈部，上肢，腰背部，臀部，下肢，-->
+        <item>腰背部</item>
+        <item>臀部</item>
+    </string-array>
+
+    <string-array name="woman">
+        <item>头部</item>
+        <item>眼部</item>
+        <item>耳部</item>
+        <item>鼻部</item>
+        <item>口部</item>
+        <item>面部</item>
+        <item>颈部</item>
+        <item>上肢</item>
+        <item>胸部</item>
+        <item>乳房</item>
+        <item>腹部</item>
+        <item>髋部</item>
+        <item>下肢</item>
+        <item>阴部</item>
+
+        <!--反面：头部，颈部，上肢，腰背部，臀部，下肢，-->
+        <item>腰背部</item>
+        <item>臀部</item>
+    </string-array>
+
+    <string name="jianjie">简介</string>
+    <string name="zhengzhuang">症状</string>
+    <string name="bingyin">病因</string>
+    <string name="zhenduan">诊断</string>
+    <string name="zhiliao">治疗</string>
+    <string name="sehgnhuo">生活</string>
+    <string name="yifang">预防</string>
+    <string name="yisheng">医生</string>
+    <string name="yiyuan">医院</string>
+    <string name="yaopin">药品</string>
+
+</resources>

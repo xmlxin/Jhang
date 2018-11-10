@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_ks_name"
+        android:text="儿科"
+        android:textSize="@dimen/sp_16"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50" />
+
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_ks_description"
+            android:text="是的法定斯洛伐克是打发斯蒂芬适得府君书是否结束打飞机时代峻峰乐山大佛水电费水电费水电费是 是打发斯蒂芬是打发了斯蒂芬是胜多负少"
+            android:textSize="@dimen/sp_13"
+            android:lineSpacingExtra="@dimen/dp_3"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40" />
+
+        <ImageView
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_arrow"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_marginLeft="@dimen/dp_16"
+        android:background="@color/color_f0f0"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+</LinearLayout>

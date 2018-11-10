@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/green_1">
+
+        <ImageView
+            android:layout_width="74.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginLeft="4.0dip"
+            android:layout_marginTop="22.5dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/im_dot"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="74.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginRight="31.0dip"
+            android:layout_marginTop="22.5dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/im_dot"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_daily_health_card"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="29.5dip"
+            android:layout_marginRight="29.5dip"
+            android:layout_marginTop="66.0dip"
+            android:background="@drawable/rec_cnr18_ffffff"
+            app:cardCornerRadius="19.0dip"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_daily_health_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginTop="18.0dip"
+                    android:lineSpacingExtra="2.0sp"
+                    android:text="2018.10.11"
+                    android:textColor="@color/grey_2"
+                    android:textSize="14.0sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20.0dip"
+                    android:layout_marginTop="15.5dip"
+                    android:src="@drawable/im_secret"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_daily_health_title"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20.0dip"
+                    android:layout_marginRight="20.0dip"
+                    android:layout_marginTop="50.0dip"
+                    android:lineSpacingExtra="13.0sp"
+                    android:text="每天至少要有相当于多少步的活动量？"
+                    android:textColor="@color/grey_2"
+                    android:textSize="26.0sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/iv_daily_health_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/im_blurry"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_daily_health_title"
+                    app:layout_constraintRight_toRightOf="@id/tv_daily_health_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_daily_health_title" />
+
+                <TextView
+                    android:id="@+id/tv_daily_health_content"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:lineSpacingExtra="8.0sp"
+                    android:text="人的性格的形成受到多种因素的共同影响。先天因素、家庭环境以及个人际遇等都会对人的性格造成影响，而辨明血型其实只跟输血安全有关。两者根本不是一码事儿。"
+                    android:textColor="@color/grey_3"
+                    android:textSize="16.0sp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_daily_health_title"
+                    app:layout_constraintRight_toRightOf="@id/tv_daily_health_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_daily_health_title" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/btn_daily_health_get"
+            android:layout_width="0.0dip"
+            android:layout_height="49.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:layout_marginRight="30.0dip"
+            android:layout_marginTop="40.0dip"
+            android:width="0.0dip"
+            android:background="@drawable/coupon_item_bg_fbce61"
+            android:gravity="center"
+            android:lineSpacingExtra="2.0sp"
+            android:text="点击获取"
+            android:textColor="#ff4f3704"
+            android:textSize="20.0sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_daily_health_card" />
+
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/share_bottom_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <View
+                android:layout_width="100.0dip"
+                android:layout_height="0.5dip"
+                android:layout_marginRight="10.0dip"
+                android:background="#4cffffff"
+                app:layout_constraintBottom_toBottomOf="@id/tv_share_desc"
+                app:layout_constraintRight_toLeftOf="@id/tv_share_desc"
+                app:layout_constraintTop_toTopOf="@id/tv_share_desc" />
+
+            <TextView
+                android:id="@+id/tv_share_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="2.0sp"
+                android:text="分享真相给好友"
+                android:textColor="@color/white"
+                android:textSize="14.0sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <View
+                android:layout_width="100.0dip"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="10.0dip"
+                android:background="#4cffffff"
+                app:layout_constraintBottom_toBottomOf="@id/tv_share_desc"
+                app:layout_constraintLeft_toRightOf="@id/tv_share_desc"
+                app:layout_constraintTop_toTopOf="@id/tv_share_desc" />
+
+            <TextView
+                android:id="@+id/btn_share_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40.0dip"
+                android:layout_marginRight="111.0dip"
+                android:layout_marginTop="78.0dip"
+                android:drawablePadding="8.0dip"
+                android:drawableTop="@drawable/ic_wechat"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="2.0sp"
+                android:text="微信好友"
+                android:textColor="@color/white"
+                android:textSize="14.0sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@id/tv_share_desc"
+                app:layout_constraintRight_toLeftOf="@id/btn_share_wechat_moment"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btn_share_wechat_moment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40.0dip"
+                android:layout_marginTop="78.0dip"
+                android:drawablePadding="8.0dip"
+                android:drawableTop="@drawable/ic_wechat_moment"
+                android:gravity="center_horizontal"
+                android:lineSpacingExtra="2.0sp"
+                android:text="朋友圈"
+                android:textColor="@color/white"
+                android:textSize="14.0sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_share_wechat"
+                app:layout_constraintRight_toRightOf="@id/tv_share_desc"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

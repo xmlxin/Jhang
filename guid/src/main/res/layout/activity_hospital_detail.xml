@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:context=".search.hospital.HospitalDetailActivity">
+
+        <include layout="@layout/layout_head" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_hospital_head"
+                android:layout_width="130dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_10" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/iv_hospital_head">
+
+                <TextView
+                    android:id="@+id/tv_hospital_name"
+                    android:textSize="@dimen/sp_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_25"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="山东省千佛山医院" />
+
+                <TextView
+                    android:id="@+id/tv_gradle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_hospital_name"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:drawableLeft="@drawable/ic_tag"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_15"
+                    android:text="三级甲等" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_hospital_name"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_toRightOf="@id/tv_gradle"
+                    android:drawableLeft="@drawable/ic_tag"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:text="医保" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/dp_15" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+
+            <TextView
+                android:id="@+id/tv_hospital_address"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_position"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_15"
+                android:text="地址" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/ic_arrow" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_marginLeft="@dimen/dp_16"
+            android:background="@color/color_f0f0"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40">
+
+            <TextView
+                android:id="@+id/tv_hospital_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_tel"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_15"
+                android:text="电话" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/ic_arrow" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/color_fafafa" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_15"
+                android:text="医院介绍"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tv_hospital_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="3"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                android:textColor="@color/color_66"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_15"
+                android:text="更多医院介绍信息"
+                android:textColor="@color/color_99"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

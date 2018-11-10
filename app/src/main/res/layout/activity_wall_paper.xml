@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/bt_selectFile"
+        android:text="选择文件"
+        style="@style/btSty"/>
+
+    <TextView
+        android:id="@+id/tv_filePath"
+        android:text=""
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/id_cb_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="是否静音" />
+
+    <TextView
+        android:text="   勾选静音"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        style="@style/btSty"
+        android:onClick="setVideoToWallPaper"
+        android:text="设置壁纸" />
+
+
+</LinearLayout>

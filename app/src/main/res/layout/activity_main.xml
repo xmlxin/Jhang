@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<include layout="@layout/base_toolbar"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_read_pic"
+                    style="@style/btSty1"
+                    android:text="读取图片" />
+
+                <TextView
+                    android:id="@+id/bt_apk_parser"
+                    style="@style/btSty1"
+                    android:text="解析apk" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_dz"
+                    style="@style/btSty1"
+                    android:text="智能导诊" />
+
+                <TextView
+                    android:id="@+id/bt_wechat_zb"
+                    style="@style/btSty1"
+                    android:text="朋友圈装逼" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_down"
+                    style="@style/btSty1"
+                    android:text="头条抖音视频下载" />
+
+                <TextView
+                    android:id="@+id/tv_truth"
+                    style="@style/btSty1"
+                    android:text="每日真相" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_search_drug"
+                    style="@style/btSty1"
+                    android:text="查疾病" />
+
+                <TextView
+                    android:id="@+id/bt_search_hospital"
+                    style="@style/btSty1"
+                    android:text="查医院" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_online_drug"
+                    style="@style/btSty1"
+                    android:text="在线选药" />
+
+                <TextView
+                    android:id="@+id/tv_fj_drug"
+                    style="@style/btSty1"
+                    android:text="查看附件药店" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_zhinegn"
+                    style="@style/btSty1"
+                    android:text="智能机器人" />
+
+                <TextView
+                    android:id="@+id/bt_fj_yy"
+                    style="@style/btSty1"
+                    android:text="查看附近医院" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_read_hard"
+                    style="@style/btSty1"
+                    android:text="读取硬件" />
+
+                <TextView
+                    android:id="@+id/bt_wall_paper"
+                    style="@style/btSty1"
+                    android:text="动态壁纸" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_mars_text"
+                    style="@style/btSty1"
+                    android:text="火ۣۖ星ۣۖ文ۣۖ字ۣۖ" />
+
+                <TextView
+                    android:id="@+id/bt_auto_message"
+                    style="@style/btSty1"
+                    android:text="微信QQ钉钉炸(群、人)" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_sms_bombing"
+                    style="@style/btSty1"
+                    android:text="自动回复" />
+
+                <TextView
+                    android:id="@+id/bt_dd_robot"
+                    style="@style/btSty1"
+                    android:text="钉钉机器人" />
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_sms"
+                    style="@style/btSty1"
+                    android:text="@string/sms_back" />
+
+                <TextView
+                    style="@style/btSty1"
+                    android:text="拍10M图片" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    style="@style/btSty1"
+                    android:text="录制4k视频" />
+
+                <TextView
+                    style="@style/btSty1"
+                    android:text="LED字幕" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_animation"
+                    style="@style/btSty1"
+                    android:text="特效合集" />
+
+                <TextView
+                    android:id="@+id/bt_douyin"
+                    style="@style/btSty1"
+                    android:text="仿抖音下拉效果" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
