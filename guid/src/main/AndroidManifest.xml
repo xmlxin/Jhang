@@ -47,6 +47,8 @@
         <activity
             android:name=".search.truth.TruthActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".JkktActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

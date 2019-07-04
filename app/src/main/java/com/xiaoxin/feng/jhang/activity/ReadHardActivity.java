@@ -20,8 +20,6 @@ import android.os.Environment;
 import android.os.StatFs;
 import android.os.SystemClock;
 import android.os.storage.StorageManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.CellInfo;
 import android.telephony.CellInfoCdma;
@@ -39,14 +37,10 @@ import android.text.format.Formatter;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.TextView;
-
 import com.xiaoxin.feng.jhang.R;
 import com.xiaoxin.feng.jhang.util.BatteryUtil;
 import com.xiaoxin.feng.jhang.util.MacUtils;
 import com.xiaoxin.feng.jhang.util.WifiAdmin;
-import com.zhanshow.mylibrary.phonestate.MyPhoneStateListener;
-import com.zhanshow.mylibrary.phonestate.PhoneStateUtils;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -167,11 +161,12 @@ public class ReadHardActivity extends AppCompatActivity {
 //                    String[] CPUusr = Result.split("%");
 //                    tv.append("USER:" + CPUusr[0] + "\n");
 //                    String[] CPUusage = CPUusr[0].split("User");
-//                    String[] SYSusage = CPUusr[1].split("System");
+////                    String[] SYSusage = CPUusr[1].split("System");
 //                    tv.append("CPU:" + CPUusage[1].trim() + " length:" + CPUusage[1].trim().length() + "\n");
-//                    tv.append("SYS:" + SYSusage[1].trim() + " length:" + SYSusage[1].trim().length() + "\n");
+////                    tv.append("SYS:" + SYSusage[1].trim() + " length:" + SYSusage[1].trim().length() + "\n");
 //
-//                    rate = Integer.parseInt(CPUusage[1].trim()) + Integer.parseInt(SYSusage[1].trim());
+//                    rate = Integer.parseInt(CPUusage[1].trim());
+////                    rate = Integer.parseInt(CPUusage[1].trim()) + Integer.parseInt(SYSusage[1].trim());
 //                    break;
 //                }
 //            }
@@ -180,6 +175,7 @@ public class ReadHardActivity extends AppCompatActivity {
 //            // TODO Auto-generated catch block
 //            e.printStackTrace();
 //        }
+//        Log.e(TAG, "getProcessCpuRate: "+rate );
 //        System.out.println(rate + "");
         return 1;
     }
@@ -790,10 +786,10 @@ public class ReadHardActivity extends AppCompatActivity {
         if(size>=1000){
             str="KB";
             size/=1000;
-            if(size>=1000){
-                str="MB";
-                size/=1000;
-            }
+//            if(size>=1000){
+//                str="MB";
+//                size/=1000;
+//            }
         }
         /*将每3个数字用,分隔如:1,000*/
         DecimalFormat formatter=new DecimalFormat();

@@ -62,10 +62,12 @@ dependencies {
     //在gradle中导入项目
     implementation project(':guid')
     implementation project(':animation')
+    implementation project(':qqun')
 
     //富文本控件
     implementation 'com.zzhoujay.richtext:richtext:3.0.7'
 
     //状态栏适配
     implementation 'com.jaeger.statusbarutil:library:1.5.1'
+//    implementation 'com.zhihu.android:matisse:v0.5.1'
 }

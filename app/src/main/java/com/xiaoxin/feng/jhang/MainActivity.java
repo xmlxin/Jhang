@@ -12,12 +12,14 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
 import com.xiaoxin.feng.jhang.activity.AccessbilityActivity;
 import com.xiaoxin.feng.jhang.activity.ApkParserActivity;
 import com.xiaoxin.feng.jhang.activity.DouyinPersonActivity;
+import com.xiaoxin.feng.jhang.activity.H5Activity;
 import com.xiaoxin.feng.jhang.activity.MarsTextActivity;
 import com.xiaoxin.feng.jhang.activity.ReadHardActivity;
 import com.xiaoxin.feng.jhang.activity.ReadPicActivity;
@@ -29,12 +31,14 @@ import com.xiaoxin.feng.jhang.adapter.FunctionAdapter;
 import com.xiaoxin.feng.jhang.bean.FunctionBean;
 import com.xiaoxin.feng.jhang.util.AccessibilityUtil;
 import com.xiaoxin.feng.jhang.wallpaper.WallPaperActivity;
+import com.xiaoxin.guid.JkktActivity;
 import com.xiaoxin.guid.activity.HumanBodyActivity;
 import com.xiaoxin.guid.search.disease.SearchDiseaseActivity;
 import com.xiaoxin.guid.search.drug.DrugListActivity;
 import com.xiaoxin.guid.search.hospital.KsSearchHospitalActivity;
 import com.xiaoxin.guid.search.truth.TruthActivity;
 import com.xiaoxin.guid.util.AppUtil;
+import com.xiaoxin.jhang.qqun.QqunActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mReadPic, mReadHard, mReadWallPaper,mMarsText,mAutoMessage,
                     mBtDdRobot,bt_wechat_zb,mApkParser,mBtSmsBack,mBtDz,mBtDouyin,
                     mBtAnimation,mBtSearchDrug,mBtSearchHospital,mBtOnlineDrug,mBtFjDrug,
-                    mBtDown,mTvTruth;
+                    mBtDown,mTvTruth,mTvQqun;
     private RecyclerView mRvList;
     private FunctionAdapter mFunctionAdapter;
     private List<FunctionBean> mList;
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
         mBtFjDrug = (TextView) findViewById(R.id.tv_fj_drug);
         mBtDown = (TextView) findViewById(R.id.bt_down);
         mTvTruth = (TextView) findViewById(R.id.tv_truth);
+        mTvQqun = (TextView) findViewById(R.id.bt_qqun);
 
 
         click();
@@ -167,9 +172,9 @@ public class MainActivity extends AppCompatActivity {
         mApkParser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,ApkParserActivity.class));
+//                startActivity(new Intent(MainActivity.this,ApkParserActivity.class));
 //                startActivity(new Intent(MainActivity.this,AnimationMainActivity.class));
-//                startActivity(new Intent(MainActivity.this,H5Activity.class));
+                startActivity(new Intent(MainActivity.this,H5Activity.class));
             }
         });
         mBtSmsBack.setOnClickListener(v -> {
@@ -204,8 +209,19 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         mTvTruth.setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, TruthActivity.class));
+//            startActivity(new Intent(MainActivity.this, TruthActivity.class));
+            startActivity(new Intent(MainActivity.this, JkktActivity.class));
         });
+
+        mTvQqun.setOnClickListener(v -> { //qqun 分析
+            startActivity(new Intent(MainActivity.this, QqunActivity.class));
+        });
+
+    }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        return super.dispatchTouchEvent(ev);
     }
 
     private void showDialog() {

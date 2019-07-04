@@ -1,1 +1,1 @@
-include ':app', ':guid', ':maplib', ':animation', ':chat'
+include ':app', ':guid',  ':animation',  ':qqun', ':library'

@@ -188,6 +188,19 @@
 
             </LinearLayout>
 
+            <LinearLayout style="@style/ll_main">
+
+                <TextView
+                    android:id="@+id/bt_qqun"
+                    style="@style/btSty1"
+                    android:text="qq群分析" />
+
+                <TextView
+                    style="@style/btSty1"
+                    android:text="" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
     </LinearLayout>

@@ -4,6 +4,7 @@ import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,6 +17,7 @@ import com.xiaoxin.feng.jhang.util.Json2Str;
 
 public class RobotActivity extends AppCompatActivity {
 
+    private static final String TAG = "RobotActivity";
     private EditText mWebhookUrl,mSendContent,mEtAt;
     private Button mBtSend;
 
@@ -47,11 +49,15 @@ public class RobotActivity extends AppCompatActivity {
                         if (!TextUtils.isEmpty(url) && !TextUtils.isEmpty(content)) {
                             Looper.prepare();
                             if (!TextUtils.isEmpty(at)) {
+                                String messageStr = Json2Str.messageStr(content, at);
+                                Log.e(TAG, "run: "+messageStr);
                                 String responseCode = HttpGet.post1(url, Json2Str.messageStr(content, at));
                                 Toast.makeText(RobotActivity.this,responseCode,Toast.LENGTH_SHORT).show();
+                                Log.e(TAG, "run: "+responseCode );
                             }else {
                                 String responseCode = HttpGet.post1(url, Json2Str.messageStr(content));
                                 Toast.makeText(RobotActivity.this,responseCode,Toast.LENGTH_SHORT).show();
+                                Log.e(TAG, "run: "+responseCode );
                             }
                             Looper.loop();
                         }
