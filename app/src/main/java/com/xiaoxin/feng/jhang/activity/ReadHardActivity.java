@@ -21,6 +21,8 @@ import android.os.StatFs;
 import android.os.SystemClock;
 import android.os.storage.StorageManager;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
 import android.telephony.CellInfo;
 import android.telephony.CellInfoCdma;
 import android.telephony.CellInfoGsm;
@@ -41,6 +43,9 @@ import com.xiaoxin.feng.jhang.R;
 import com.xiaoxin.feng.jhang.util.BatteryUtil;
 import com.xiaoxin.feng.jhang.util.MacUtils;
 import com.xiaoxin.feng.jhang.util.WifiAdmin;
+import com.zhanshow.mylibrary.phonestate.MyPhoneStateListener;
+import com.zhanshow.mylibrary.phonestate.PhoneStateUtils;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
