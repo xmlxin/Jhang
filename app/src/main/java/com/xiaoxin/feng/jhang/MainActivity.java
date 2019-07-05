@@ -33,6 +33,7 @@ import com.xiaoxin.feng.jhang.util.AccessibilityUtil;
 import com.xiaoxin.feng.jhang.wallpaper.WallPaperActivity;
 import com.xiaoxin.guid.JkktActivity;
 import com.xiaoxin.guid.activity.HumanBodyActivity;
+import com.xiaoxin.guid.listfriend.ListFriendActivity;
 import com.xiaoxin.guid.search.disease.SearchDiseaseActivity;
 import com.xiaoxin.guid.search.drug.DrugListActivity;
 import com.xiaoxin.guid.search.hospital.KsSearchHospitalActivity;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mReadPic, mReadHard, mReadWallPaper,mMarsText,mAutoMessage,
                     mBtDdRobot,bt_wechat_zb,mApkParser,mBtSmsBack,mBtDz,mBtDouyin,
                     mBtAnimation,mBtSearchDrug,mBtSearchHospital,mBtOnlineDrug,mBtFjDrug,
-                    mBtDown,mTvTruth,mTvQqun;
+                    mBtDown,mTvTruth,mTvQqun,mTvList;
     private RecyclerView mRvList;
     private FunctionAdapter mFunctionAdapter;
     private List<FunctionBean> mList;
@@ -86,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
         mBtDown = (TextView) findViewById(R.id.bt_down);
         mTvTruth = (TextView) findViewById(R.id.tv_truth);
         mTvQqun = (TextView) findViewById(R.id.bt_qqun);
+        mTvList = (TextView) findViewById(R.id.tv_list);
 
 
         click();
@@ -172,9 +174,9 @@ public class MainActivity extends AppCompatActivity {
         mApkParser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this,ApkParserActivity.class));
+                startActivity(new Intent(MainActivity.this,ApkParserActivity.class));
 //                startActivity(new Intent(MainActivity.this,AnimationMainActivity.class));
-                startActivity(new Intent(MainActivity.this,H5Activity.class));
+//                startActivity(new Intent(MainActivity.this,H5Activity.class));
             }
         });
         mBtSmsBack.setOnClickListener(v -> {
@@ -216,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
         mTvQqun.setOnClickListener(v -> { //qqun 分析
             startActivity(new Intent(MainActivity.this, QqunActivity.class));
         });
+        mTvList.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ListFriendActivity.class)));
 
     }
 

@@ -196,8 +196,9 @@
                     android:text="qq群分析" />
 
                 <TextView
+                    android:id="@+id/tv_list"
                     style="@style/btSty1"
-                    android:text="" />
+                    android:text="分组列表" />
 
             </LinearLayout>
 

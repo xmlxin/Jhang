@@ -49,6 +49,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".JkktActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".listfriend.ListFriendActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

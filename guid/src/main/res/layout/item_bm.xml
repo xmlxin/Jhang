@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <View
+        android:background="#f0f0f0"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/iv_select_bm"
+            android:padding="10dp"
+            android:src="@drawable/tongxunlu_weixuan"
+            android:layout_width="40dp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="部门(5)"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
