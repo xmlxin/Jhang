@@ -2,15 +2,13 @@ package com.xiaoxin.feng.jhang.app;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.databinding.DataBindingUtil;
-import android.databinding.ViewDataBinding;
+import androidx.databinding.DataBindingUtil;
+import androidx.databinding.ViewDataBinding;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.LayoutRes;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
-
-import com.xiaoxin.feng.jhang.R;
 
 /**
  * @author: xiaoxin

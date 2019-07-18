@@ -1,9 +1,8 @@
 package com.xiaoxin.feng.jhang.adapter;
 
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
 import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;

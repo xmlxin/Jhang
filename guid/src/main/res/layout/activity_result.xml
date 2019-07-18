@@ -8,7 +8,7 @@
     tools:context=".activity.ResultActivity">
 
     <include layout="@layout/layout_head"/>
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_result"
         android:background="@color/white"
         android:layout_above="@id/bt_sure"

@@ -1,8 +1,8 @@
 package com.xiaoxin.jhang.qqun;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import com.xiaoxin.library.HttpGet;
 import com.xiaoxin.library.base.BaseActivity;
-import com.xiaoxin.library.util.GsonUtils;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -2,7 +2,7 @@ package com.xiaoxin.feng.jhang.activity.animation;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.xiaoxin.feng.jhang.R;
 import com.xiaoxin.feng.jhang.app.BaseBindingActivity;

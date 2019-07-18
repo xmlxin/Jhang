@@ -1,11 +1,10 @@
 package com.xiaoxin.feng.jhang.activity;
 
-import android.databinding.ViewDataBinding;
+import androidx.databinding.ViewDataBinding;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.Log;
 
-import com.xiaoxin.feng.jhang.MainActivity;
 import com.xiaoxin.feng.jhang.R;
 import com.xiaoxin.feng.jhang.app.BaseBindingActivity;
 import com.xiaoxin.feng.jhang.databinding.ActivitySmsbackBinding;

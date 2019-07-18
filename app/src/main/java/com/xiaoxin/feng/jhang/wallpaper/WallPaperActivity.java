@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +16,6 @@ import android.widget.Toast;
 
 import com.xiaoxin.feng.jhang.R;
 import com.xiaoxin.feng.jhang.util.UriPathUtil;
-import com.xiaoxin.feng.jhang.wallpaper.VideoLiveWallpaper;
 
 import java.io.File;
 import java.io.FileOutputStream;
