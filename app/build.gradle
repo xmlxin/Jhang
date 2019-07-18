@@ -62,7 +62,7 @@ dependencies {
     //在gradle中导入项目
     implementation project(':guid')
     implementation project(':animation')
-    implementation project(':qqun')
+//    implementation project(':qqun')
 
     //富文本控件
     implementation 'com.zzhoujay.richtext:richtext:3.0.7'

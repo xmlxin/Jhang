@@ -37,11 +37,8 @@ import com.xiaoxin.guid.search.disease.SearchDiseaseActivity;
 import com.xiaoxin.guid.search.drug.DrugListActivity;
 import com.xiaoxin.guid.search.hospital.KsSearchHospitalActivity;
 import com.xiaoxin.guid.util.AppUtil;
-import com.xiaoxin.jhang.qqun.QqunActivity;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt;
 import uk.co.samuelwall.materialtaptargetprompt.extras.backgrounds.RectanglePromptBackground;
 import uk.co.samuelwall.materialtaptargetprompt.extras.focals.RectanglePromptFocal;
@@ -214,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         mTvQqun.setOnClickListener(v -> { //qqun 分析
-            startActivity(new Intent(MainActivity.this, QqunActivity.class));
+//            startActivity(new Intent(MainActivity.this, QqunActivity.class));
         });
         mTvList.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, ListFriendActivity.class)));
 
