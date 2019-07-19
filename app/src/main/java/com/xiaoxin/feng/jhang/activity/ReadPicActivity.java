@@ -3,6 +3,8 @@ package com.xiaoxin.feng.jhang.activity;
 import android.content.Intent;
 import android.media.ExifInterface;
 import android.net.Uri;
+
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,10 +15,13 @@ import android.widget.Toast;
 
 import com.xiaoxin.feng.jhang.R;
 import com.xiaoxin.feng.jhang.util.UriPathUtil;
+import com.xiaoxin.library.base.BaseActivity;
+import com.xiaoxin.library.base.BaseBackActivity;
+import com.xiaoxin.library.base.BaseTitleActivity;
 
 import java.io.IOException;
 
-public class ReadPicActivity extends AppCompatActivity implements View.OnClickListener{
+public class ReadPicActivity extends BaseTitleActivity implements View.OnClickListener{
 
     private static final String TAG = "ReadPicActivity";
     private static final int FILE_SELECT_CODE = 0;
@@ -24,17 +29,6 @@ public class ReadPicActivity extends AppCompatActivity implements View.OnClickLi
     private TextView mResult;
     private String mPath;
     ExifInterface exifInterface;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_read_pic);
-        mSelectFile = (Button) findViewById(R.id.select_file);
-        mResult = (TextView) findViewById(R.id.tv_result);
-
-        mSelectFile.setOnClickListener(this);
-        mResult.setOnClickListener(this);
-    }
 
     @Override
     public void onClick(View view) {
@@ -60,7 +54,6 @@ public class ReadPicActivity extends AppCompatActivity implements View.OnClickLi
         try {
             startActivityForResult( Intent.createChooser(intent, "Select a File to Upload"), FILE_SELECT_CODE);
         } catch (android.content.ActivityNotFoundException ex) {
-            // Potentially direct the user to the Market with a Dialog
             Toast.makeText(this, "Please install a File Manager.", Toast.LENGTH_SHORT).show();
         }
     }
@@ -148,5 +141,40 @@ public class ReadPicActivity extends AppCompatActivity implements View.OnClickLi
                 }
                 break;
         }
+    }
+
+    @Override
+    public void initData(@Nullable Bundle bundle) {
+//        setIsSupportScroll(false);
+    }
+
+    @Override
+    public int bindLayout() {
+        return R.layout.activity_read_pic;
+    }
+
+    @Override
+    public void initView(@Nullable Bundle savedInstanceState, @Nullable View contentView) {
+        mSelectFile = (Button) findViewById(R.id.select_file);
+        mResult = (TextView) findViewById(R.id.tv_result);
+
+        mSelectFile.setOnClickListener(this);
+        mResult.setOnClickListener(this);
+    }
+
+    @Override
+    public void doBusiness() {
+
+    }
+
+
+    @Override
+    public CharSequence bindTitle() {
+        return "Sub Util";
+    }
+
+    @Override
+    public boolean isSwipeBack() {
+        return true;
     }
 }

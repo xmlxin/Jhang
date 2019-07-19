@@ -51,7 +51,8 @@
                 android:resource="@xml/file_path" />
         </provider>
 
-        <activity android:name=".activity.ReadPicActivity" />
+        <activity android:name=".activity.ReadPicActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.ReadHardActivity" />
         <activity android:name=".wallpaper.WallPaperActivity" />
         <activity android:name=".activity.MarsTextActivity" />

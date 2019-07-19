@@ -1,7 +1,6 @@
 package com.xiaoxin.feng.jhang
 
 import android.Manifest
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -10,7 +9,6 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.blankj.utilcode.util.ActivityUtils
 import com.xiaoxin.feng.jhang.activity.*
 import com.xiaoxin.feng.jhang.activity.animation.AnimationActivity
 import com.xiaoxin.feng.jhang.util.AccessibilityUtil
@@ -29,7 +27,7 @@ import uk.co.samuelwall.materialtaptargetprompt.MaterialTapTargetPrompt
 import uk.co.samuelwall.materialtaptargetprompt.extras.backgrounds.RectanglePromptBackground
 import uk.co.samuelwall.materialtaptargetprompt.extras.focals.RectanglePromptFocal
 
-class MainActivity :BaseActivity(){
+class MainActivity : BaseActivity(){
 
     override fun initData(bundle: Bundle?) {
 

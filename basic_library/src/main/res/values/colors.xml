@@ -3,5 +3,8 @@
 
     <color name="mediumGray">#CCD1D9</color>
     <color name="white">#FFFFFF</color>
+    <color name="title">#334060</color>
 
+    <color name="colorPrimary">#334060</color>
+    <color name="colorPrimaryDark">#334060</color>
 </resources>
