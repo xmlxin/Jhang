@@ -9,16 +9,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 
+import com.trello.rxlifecycle3.components.support.RxAppCompatActivity;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /**
  * @author: xiaoxin
  * date: 2018/10/30
- * describe:
+ * describe: 基础 activity
  * 修改内容:
  */
-public abstract class BaseActivity  extends AppCompatActivity implements IBaseView{
+public abstract class BaseActivity  extends RxAppCompatActivity implements IBaseView{
 
     protected View mContentView;
     protected Activity mActivity;
@@ -38,17 +40,18 @@ public abstract class BaseActivity  extends AppCompatActivity implements IBaseVi
         MIUISetStatusBarLightMode(this.getWindow(), true);
         Bundle bundle = getIntent().getExtras();
         initData(bundle);
-        setBaseView(bindLayout());
+        setRootLayout(bindLayout());
         initView(savedInstanceState, mContentView);
         doBusiness();
     }
 
     @SuppressLint("ResourceType")
-    protected void setBaseView(@LayoutRes int layoutId) {
+    @Override
+    public void setRootLayout(@LayoutRes int layoutId) {
         if (layoutId <= 0) return;
-
         setContentView(mContentView = LayoutInflater.from(this).inflate(layoutId, null));
     }
+
 
     /**
      * 判断是否快速点击

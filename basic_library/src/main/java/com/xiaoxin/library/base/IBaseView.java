@@ -1,6 +1,8 @@
 package com.xiaoxin.library.base;
 
 import android.os.Bundle;
+
+import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import android.view.View;
 
@@ -28,10 +30,12 @@ interface IBaseView extends View.OnClickListener {
      */
     int bindLayout();
 
+    void setRootLayout(@LayoutRes int layoutId);
+
     /**
      * 初始化 view
      */
-    void initView(final Bundle savedInstanceState, final View contentView);
+    void initView(@Nullable Bundle savedInstanceState, @Nullable View contentView);
 
     /**
      * 业务操作

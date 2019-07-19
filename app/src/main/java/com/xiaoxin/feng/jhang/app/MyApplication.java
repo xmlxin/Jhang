@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.os.StrictMode;
 
+import androidx.multidex.MultiDex;
+
 /**
  * @author: xiaoxin
  * date: 2018/5/24
@@ -24,5 +26,12 @@ public class MyApplication extends Application {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         builder.detectFileUriExposure();
+    }
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+
+        MultiDex.install(this);
     }
 }

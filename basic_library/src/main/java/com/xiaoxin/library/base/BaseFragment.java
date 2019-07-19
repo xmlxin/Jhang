@@ -1,57 +1,122 @@
 package com.xiaoxin.library.base;
 
+import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * @author: xiaoxin
- * date: 2018/10/27
- * describe:
- * 修改内容:
- */
-public abstract class BaseFragment extends Fragment {
+import androidx.annotation.IdRes;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.FragmentTransaction;
 
-    private String content;
-    protected static final String ARG_PARAM1 = "param1";
+import com.blankj.utilcode.util.ClickUtils;
+import com.trello.rxlifecycle3.components.support.RxFragment;
 
-    /**
-     * 获取布局ID
-     */
-    protected abstract int getContentViewLayoutID();
+public abstract class BaseFragment extends RxFragment
+        implements IBaseView {
 
-    /**
-     * 界面初始化
-     * @param view
-     */
-    protected abstract void initView(View view);
+    private static final String TAG                  = "BaseFragment";
+    private static final String STATE_SAVE_IS_HIDDEN = "STATE_SAVE_IS_HIDDEN";
 
-    /**
-     * 请求数据
-     */
-    protected abstract void initData();
+    private View.OnClickListener mClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            onWidgetClick(v);
+        }
+    };
 
-    @Nullable
+    protected Activity mActivity;
+    protected LayoutInflater mInflater;
+    protected View mContentView;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if (getContentViewLayoutID() != 0) {
-            return inflater.inflate(getContentViewLayoutID(), container, false);
-        } else {
-            return super.onCreateView(inflater, container, savedInstanceState);
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        mActivity = (Activity) context;
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: ");
+        super.onCreate(savedInstanceState);
+        if (savedInstanceState != null) {
+            boolean isSupportHidden = savedInstanceState.getBoolean(STATE_SAVE_IS_HIDDEN);
+            FragmentTransaction ft = getFragmentManager().beginTransaction();
+            if (isSupportHidden) {
+                ft.hide(this);
+            } else {
+                ft.show(this);
+            }
+            ft.commitAllowingStateLoss();
         }
     }
 
+    @Nullable
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-
-        initView(view);
-        initData();
-        //订阅事件
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        Log.d(TAG, "onCreateView: ");
+        mInflater = inflater;
+        setRootLayout(bindLayout());
+        return mContentView;
     }
 
+    @SuppressLint("ResourceType")
+    @Override
+    public void setRootLayout(@LayoutRes int layoutId) {
+        if (layoutId <= 0) return;
+        mContentView = mInflater.inflate(layoutId, null);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        Log.d(TAG, "onViewCreated: ");
+        super.onViewCreated(view, savedInstanceState);
+        Bundle bundle = getArguments();
+        initData(bundle);
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        Log.d(TAG, "onActivityCreated: ");
+        super.onActivityCreated(savedInstanceState);
+        initView(savedInstanceState, mContentView);
+        doBusiness();
+    }
+
+    @Override
+    public void onDestroyView() {
+        Log.d(TAG, "onDestroyView: ");
+        if (mContentView != null) {
+            ((ViewGroup) mContentView.getParent()).removeView(mContentView);
+        }
+        super.onDestroyView();
+    }
+
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        Log.d(TAG, "onSaveInstanceState: ");
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(STATE_SAVE_IS_HIDDEN, isHidden());
+    }
+
+    @Override
+    public void onDestroy() {
+        Log.d(TAG, "onDestroy: ");
+        super.onDestroy();
+    }
+
+    public void applyDebouncingClickListener(View... views) {
+        ClickUtils.applyGlobalDebouncing(views, mClickListener);
+    }
+
+    public <T extends View> T findViewById(@IdRes int id) {
+        if (mContentView == null) throw new NullPointerException("ContentView is null.");
+        return mContentView.findViewById(id);
+    }
 }
