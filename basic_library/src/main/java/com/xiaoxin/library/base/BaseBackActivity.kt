@@ -10,7 +10,7 @@ import com.xiaoxin.library.R
 /**
  * @author: xiaoxin
  * date: 2019/7/19
- * describe: 侧滑返回 activity
+ * describe: 侧滑返回 activity 需要NoActionBar主题，
  * 修改内容:
  */
 abstract class BaseBackActivity : BaseActivity() {

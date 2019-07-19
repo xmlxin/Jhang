@@ -2,12 +2,14 @@ package com.xiaoxin.library.base
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.res.Resources
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.Window
+import com.blankj.utilcode.util.AdaptScreenUtils
 
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity
 
@@ -103,6 +105,13 @@ abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
             }
             return result
         }
+    }
+
+    /**
+     * 以宽1080 适配
+     */
+    override fun getResources(): Resources {
+        return AdaptScreenUtils.adaptWidth(super.getResources(), 1080)
     }
 
 }
