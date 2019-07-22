@@ -6,7 +6,7 @@
         <attr name="textcolor" format="color" />
         <attr name="textSize" format="dimension" />
         <attr name="isRepeat" format="boolean" />
-        <attr name="speed" format="integer"/>
+        <attr name="speed1" format="integer"/>
         <attr name="startPoint" format="integer">
             <enum name="start" value="0"/>
             <enum name="end" value="1"/>

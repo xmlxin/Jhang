@@ -85,7 +85,7 @@ public class MarqueeView extends SurfaceView implements SurfaceHolder.Callback{
         mIsRepeat=a.getBoolean(R.styleable.MarqueeView_isRepeat,false);
         mStartPoint=a.getInt(R.styleable.MarqueeView_startPoint,0);
         mDirection=a.getInt(R.styleable.MarqueeView_direction,0);
-        mSpeed=a.getInt(R.styleable.MarqueeView_speed,20);
+        mSpeed=a.getInt(R.styleable.MarqueeView_speed1,20);
         a.recycle();
 
         holder = this.getHolder();

@@ -55,4 +55,7 @@ dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.1'
     api 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1'
+
+    //https://github.com/ForgetAll/LoadingDialog
+    implementation 'com.github.ForgetAll:LoadingDialog:v1.1.2'
 }

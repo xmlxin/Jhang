@@ -12,9 +12,7 @@ import android.view.Window
 import com.blankj.utilcode.util.AdaptScreenUtils
 
 import com.trello.rxlifecycle3.components.support.RxAppCompatActivity
-
-import java.lang.reflect.Field
-import java.lang.reflect.Method
+import com.xiaoxin.library.util.ActivityManager
 
 /**
  * @author: xiaoxin
@@ -50,6 +48,7 @@ abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mActivity = this
+        ActivityManager.instance.addActivity(this)
 //        this.window
 //                .decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 //        MIUISetStatusBarLightMode(this.window, true)
@@ -112,6 +111,11 @@ abstract class BaseActivity : RxAppCompatActivity(), IBaseView {
      */
     override fun getResources(): Resources {
         return AdaptScreenUtils.adaptWidth(super.getResources(), 1080)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ActivityManager.instance.removeActivity(this)
     }
 
 }
